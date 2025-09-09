@@ -1,4 +1,4 @@
-package com.duoc.bancoxyz.entity;
+package com.duoc.bancoxyz.entidades;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.duoc.bancoxyz.entity;
+package com.duoc.bancoxyz.entidades;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,21 +11,27 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Table(name = "intereses")
-public class Interes {
+@Table(name = "cuentas_anuales")
+public class CuentaAnual {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(name = "id_cuenta")
     private String idCuenta;
-    @Column(name = "nombre_cliente")
-    private String nombreCliente;
-    private Integer saldo;
-    @Column(name = "edad_cliente")
-    private Integer edadCliente;
-    @Column(name = "tipo_interes")
-    private String tipoInteres;
+
+    @Column(name = "fecha_transaccion")
+    private String fecha;
+
+    @Column(name = "tipo_transanccion")
+    private String tipoTransaccion;
+
+    private Integer monto;
+
+    @Column(name = "descripcion_transaccion")
+    private String descTransaccion;
+
 }
